@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Galeria de Fotos</title>
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif
+        }
+        
+       </style>
+</head>
+<body class="w3-black">
+    
+        <h2 class="w3-center w3-text-cyan">Docentes</h2>
+        <div class="w3-content w3-section w3-center" style="max-width:500px">   
+
+      <img class="slide" src="IMG/monica.png" style="width:100%">
+      <img class="slide" src="IMG/cebola.png" style="width:100%">
+      <img class="slide" src="IMG/magali.jpg" style="width:100%">
+      <img class="slide" src="IMG/cascao.jpg" style="width:100%">
+      <br>
+    </div>
+    </div>
+  
+    <script>
+      var index = 0;
+      carousel();
+  
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("slide");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        index++;
+        if (index > x.length) { index = 1 }
+        x[index - 1].style.display = "block";
+        setTimeout(carousel, 2000); 
+      }
+    </script>
+   
+  </body>
+</html>
